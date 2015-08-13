@@ -1,5 +1,10 @@
-# Reproducible Research: Peer Assessment 1
-Gustavo Mercier  
+---
+title: "Reproducible Research: Peer Assessment 1"
+author: Gustavo Mercier
+output:    
+  html_document:
+    keep_md: True
+---
 
 
 ## Loading and preprocessing the data
@@ -69,7 +74,7 @@ hist(sum_by_days$sum,breaks=10,main="Steps in a day\nDistribution",
      xlab="Number of steps in a day")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-3-1.png) 
+![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3-1.png) 
 
 Notice that the distribution is skewed to the left by the missing data.
 
@@ -103,7 +108,7 @@ plot(mean_by_interval$interval,mean_by_interval$mean,type="l",
      xlab="Interval ID",ylab="Average Number of Steps")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-5-1.png) 
+![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5-1.png) 
 
 This shows us that up to 5 o'clock in the morning there are few steps, but that most of the steps occur near 9 o'clock. The afternoon is more variable, and by 2000, or 8 pm, we are on our way to bed.
 
@@ -152,7 +157,7 @@ hist(sum_by_days$sum,breaks=10,main="Steps in a day\nDistribution with data impu
      xlab="Number of steps in a day")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-8-1.png) 
+![plot of chunk unnamed-chunk-8](figure/unnamed-chunk-8-1.png) 
 
 This time the skewness is lost, and the median and the average are identical!
 
@@ -196,7 +201,7 @@ g <- xyplot(mean.steps. ~ interval | what.day, data=data_as_df,
 print(g)
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-10-1.png) 
+![plot of chunk unnamed-chunk-10](figure/unnamed-chunk-10-1.png) 
 
 
 Indeed, there are differences! We see a more even number of steps over weekends than in the weekdays where a large number of steps occur in the morning.
