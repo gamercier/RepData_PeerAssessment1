@@ -57,7 +57,7 @@ Notice that the distribution is skewed to the left by the missing data.
 From this data we can also compute the average number and median number of steps in a day. Then it is easy to see that the average number of steps in a day is close to 10,000. This average is a bit less than the median, consistent with the skewness to the left.
 
 ```{r echo=TRUE}
-summary(sum_by_days$sum)
+summary(sum_by_days$sum,na.rm=TRUE)
 ```
 
 
